@@ -1,24 +1,29 @@
 import React from "react";
-import { CoreValueList } from "../helpers/CoreValuesMenuList";
-//import MenuItem from "../components/MenuItem";
-import "../styles/Menu.css";
+import { CoreValueList } from "../helpers/CoreValuesList";
+import CoreValueItem from "../components/CoreValueItem";
+//import CourseItemModal from "../components/CourseItemModal";
+import "../styles/Course.css";
+//mport Modal from 'react-modal';
+
 
 function Course() {
+     
   return (
-    <div className="menu">
-      <h1 className="menuTitle">Our Course</h1>
-      <div className="menuList">
-      {/*   {MenuList.map((menuItem, key) => {
+    <div className="course">
+      <h1 className="courseTitle">Our Course</h1>
+      <div className="courseList">
+        {CoreValueList.map((coreValueItem, key) => {
            return (
-            <MenuItem
-              key={key}
-              image={menuItem.image}
-              name={menuItem.name}
-              price={menuItem.price}
-            />
+            <CoreValueItem
+               key={key}
+               image={coreValueItem.image}
+               name={coreValueItem.name}
+               description={coreValueItem.description}
+                 />            
           );
-        })}  */}
+        })} 
       </div>
+       
     </div>
   );
 }

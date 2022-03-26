@@ -1,4 +1,4 @@
-.menu {
+.course {
   width: 100%;
   height: auto;
   display: flex;
@@ -6,36 +6,37 @@
   align-items: center;
   flex-direction: column;
 }
-.menu .menuTitle {
+.course .courseTitle {
   font-family: europa, "proxima-nova", "Helvetica Neue", Helvetica, Arial,
     sans-serif;
   font-size: 60px;
 }
 
-.menuList {
-  width: 70vw;
+.courseList {
+  width: 100%;
   height: auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   place-items: center;
 }
 
-/* MENU ITEM STYLING */
+/* course ITEM STYLING */
 
-.menuItem {
+.courseItem {
   border-radius: 15px;
-  width: 300px;
-  height: 350px;
+  width: 350px;
+  height: 400px;
   margin: 20px;
   box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+  overflow: scroll;
 }
-.menuItem:hover {
+.courseItem:hover {
   box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.5);
   transition: 0.3s ease-in;
   cursor: pointer;
 }
 
-.menuItem div {
+.courseItem div {
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   width: 100%;
@@ -45,19 +46,19 @@
   background-size: cover;
 }
 
-.menuItem h1,
-.menuItem p {
+.courseItem h1,
+.courseItem p {
   margin-left: 20px;
 }
 
-@media only screen and (max-width: 1300px) {
-  .menuList {
+@media only screen and (max-width: 1200px) {
+  .courseList {
     grid-template-columns: 1fr 1fr;
   }
 }
 
 @media only screen and (max-width: 800px) {
-  .menuList {
+  .courseList {
     grid-template-columns: 1fr;
   }
 }
